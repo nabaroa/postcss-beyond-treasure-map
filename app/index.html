@@ -1,0 +1,922 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>PostCSS. Beyond the treasure map</title>
+    <meta name="description" content="Slides on postCSS">
+    <meta name="author" content="Naiara Abaroa">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <link rel="shortcut icon" href="assets/favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+    <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+</head>
+
+<body>
+    <div class="reveal">
+        <!-- Any section element inside of this container is displayed as a slide -->
+        <div class="slides">
+            <section>
+                <section class="home" data-background="assets/cover.jpg" data-background-position="top left">
+                </section>
+                <section>
+                    <div class="flex center ">
+                        <div>
+                            <h1 class="bold">I am</h1>
+                            <p>Naiara Abaroa </p>
+                            <a href="https://twitter.com/nabaroa" target="_blank">@nabaroa</a> <a href="http://naknak.me" target="_blank">naknak.me</a>
+                        </div>
+                        <div>
+                            <p><span class="icon-heart color "></span> CSS</p>
+                            <img class="circle  " src="assets/naiara_abaroa.jpg" alt="Naiara Abaroa" width="200">
+                            <p>
+                                <img src="assets/n.svg" alt="">
+                            </p>
+                        </div>
+                        <div>
+                            <p><span class=" bold">UI designer/CSS lover</span> at
+                                <a class="bold no-text-decoration " href="http://theinit.com" target="_blank"><img src="assets/init.png" alt="init" /></a>
+                            </p>
+                            <p>
+
+
+
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <img src="assets/Frontgirls.png" alt="">
+                </section>
+                <section data-background="assets/fear.jpg" data-background-position="center left">
+
+
+                </section>
+                <section data-background="assets/play.jpg" data-background-position="center left">
+                    <!-- <h1><span class="bold color">Touch</span> the future <br> & <br>
+                   <span class="color bold">play</span> with it</h1> -->
+                </section>
+
+                <!--        <section>
+                    <h1>Are you a <span class="color bold">pioneer</span>?</h1>
+                    <h2>You'll <span class="color bold">enjoy </span>;)</h2>
+                </section> -->
+            </section>
+            <!-- Example of nested vertical slides -->
+            <section>
+                <section>
+                    <h1><span class="text color  bold ">What</span> is <span class="bold">PostCSS?</span> <br> </h1>
+                    <a class="icon-source" href="http://postcss.org/" target="_blank"></a>
+                </section>
+                <section>
+                    <h1>Author</h1>
+                    <h2><span class="bold color">Andrey Sitnik</span> <a href="https://twitter.com/andreysitnik" target="_blank">@andreysitnik</a></h2>
+                    <img class="circle black-white" src="assets/andrey.jpeg" alt="" width="200">
+                    <blockquote>Someone asked Andrey: why did you create PostCSS?
+                        <br> <span class="bold"> “because <a href="https://twitter.com/tjholowaychuk" target="_blank">TJ Holowaychuk</a> did not want to improve <a href="https://github.com/reworkcss/rework" target="_blank">Rework API</a>”</span></blockquote>
+                </section>
+                <section>
+                  <h1></h1>
+                  <a href="https://twitter.com/andreysitnik/status/705359391927701504"target="_blank"><img src="assets/andreystweet2.png" alt=""></a><br><br>
+                  <a href="https://twitter.com/andreysitnik/status/741631105510576129"target="_blank"><img src="assets/andreystweet.png" alt=""></a>
+
+                </section>
+                <section>
+                    <h1>A <span class="color bold">tool for transforming CSS</span> with JavaScript</h1></section>
+                <section>
+                    <h1>Based on <span class="bold color">plugins</span></h1>
+                    <h2>Build you own environment</h2>
+                    <a href="http://postcss.parts/" class="icon-source" target="_blank"></a>
+                    <p>Currently, PostCSS has <span class="bold color">more than 200 plugins</span></p>
+                </section>
+                <section>
+                    <h1>PostCSS <span class="color bold">it is NOT</span></h1>
+                    <ul>
+                        <li>a <span class="bold color">prepocessor</span></li>
+                        <li>a <span class="bold color">postprocessor</span></li>
+                        <li>the <span class="bold color">future sintax</span></li>
+                        <li>a <span class="bold color">cleaning tool</span></li>
+                    </ul>
+
+                </section>
+                <section>
+                    <h1>Admitting naming <span class="color bold">mistakes</span></h1>
+                    <img src="assets/mistake.png" alt="">
+                    <a href="https://twitter.com/postcss/status/626046993006239744" class="icon-source"></a>
+                </section>
+                <section>
+                    <h1>Origin</h1>
+                </section>
+                <section>
+                    <h1>Autoprefixer</h1>
+                    <ul>
+                        <li>The <span class="bold color">first, the best known</span> and <span class="bold color">most widely used</span> plugin</li>
+                    </ul>
+                    <p>It is <a href="https://developers.google.com/web/tools/setup/setup-buildtools#dont-trip-up-with-vendor-prefixes" target="_blank">recommended by Google </a>and used in Twitter.</p>
+                    <p>
+                        <a class="icon-source" href="https://github.com/postcss/autoprefixer" target="_blank"></a>
+                    </p>
+                </section>
+
+                <section>
+                    <h1>Current <span class="bold color">status</span></h1>
+                </section>
+                <section>
+                    <h1>npm-stat.com</h1>
+                    <p>Total number of <span class="bold color">downloads last year</span>,<br> between Oct 12 2015 and Oct 12 2016: <span class="bold color">28.690.707</span></p>
+                    <img src="assets/current-status-sep.svg" alt="">
+                    <a class="icon-source" href="http://npm-stat.com/charts.html?package=postcss" target="_blank"></a>
+                </section>
+
+                <section>
+                    <h1>Benefits</h1>
+                    <ul>
+                        <li>Regular CSS</li>
+                        <li>Versatility</li>
+                        <li>Modularity</li>
+                        <li>Speed</li>
+                        <li>DIY</li>
+                        <li>Used in common dev. enviroments</li>
+                        <li>Community</li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>Regular CSS</h1>
+                    <ul>
+                        <li>Back to the roots & the <span class="bold color">specification</span></li>
+                        <li>It does<span class="bold color"> not require a specific syntax</span></li>
+                        <li>It does <span class="bold color">not block the code</span> (Sass, Less)</li>
+                        <li>It is <span class="bold color">not necesary to translate</span> the code to other languages </li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>Versatility</h1>
+                    <h2>Currently, PostCSS has <br> <span class="bold color">more than 200 plugins</span></h2>
+                    <blockquote>If you can imagin, you can do it</blockquote>
+                    <a class="icon-source" href="http://postcss.parts/" target="_blank"></a>
+                </section>
+                <section>
+                    <h1>Modularity</h1>
+                    <h2>Use <span class="bold color">only what you need</span></h2>
+                    <h2><span class="bold color">Each</span> plugin for <span class="bold color">each</span> task</h2>
+                    <p>*But there are also plugin <span class="bold color">packages</span></p>
+                </section>
+                <section>
+                    <h1>Speed</h1>
+                    <h2>It's <span class="bold color">3 times faster</span></h2>
+                    <h3>PostCSS Benchmarks: Preprocessors</h3>
+                    <p>Compare CSS processors for parsings, nested rules, mixins, variables and math:</p>
+                    <pre><code>
+PostCSS:   39 ms
+Rework:    73 ms   (1.9 times slower)
+libsass:   77 ms   (1.9 times slower)
+Less:      179 ms  (4.5 times slower)
+Stylus:    269 ms  (6.8 times slower)
+Stylecow:  271 ms  (6.9 times slower)
+Ruby Sass: 1101 ms (28.0 times slower)
+        </code></pre>
+                    <p>
+                        <a class="icon-source" href="https://github.com/postcss/benchmark " target="_blank"></a>
+                    </p>
+                </section>
+                <section>
+                    <h1>DIY</h1>
+                    <h3>You don’t need special permission to make a PostCSS plugin; if you want to make one, <br>you just<span class="bold color"> go right ahead and make it</span>.</h3>
+                    <a class="icon-source" href="http://webdesign.tutsplus.com/tutorials/postcss-deep-dive-create-your-own-plugin--cms-24605" target="_blank"></a>
+                </section>
+                <section>
+                    <h1>Community</h1>
+                    <h2><span class="color bold">♡</span> Open source</h2>
+                </section>
+            </section>
+            <!-- nak -->
+            <section>
+                <section>
+                    <h1><span class="text ">Instalation</span></h1>
+                    <a class="icon-source" href="" target="_blank"></a>
+                </section>
+                <section>
+                    <h1>Used in <span class="bold color">common dev. enviroments</span></h1>
+                    <ul>
+                        <li>Gulp</li>
+                        <li>Grunt</li>
+                        <li>npm</li>
+                        <li>Codepen</li>
+                        <li>Prepros</li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>Install <span class="bold color">postCSS</span></h1>
+                    <pre><code>npm install gulp-postcss --save-dev </code></pre>
+                </section>
+                <section>
+                    <h1>Install the <span class="color bold">selected plugins</span></h1>
+                    <pre><code>
+                    npm install postcss-import --save-dev
+                    npm install postcss-custom-properties --save-dev
+                    npm install postcss-nested --save-dev
+                    npm install postcss-mixins --save-dev
+                    ...
+                            </code></pre>
+                </section>
+                <section>
+                    <h1>gulpfile.com</h1>
+                    <pre><code>
+var gulp = require('gulp'),
+    postcss = require('gulp-postcss'),
+    import = require('postcss-import'),
+    customproperties = require('postcss-custom-properties'),
+    mixins = require('postcss-mixins'),
+    nested = require('postcss-nested');
+
+gulp.task('css', function() {
+    var processors = [
+        import,
+        cssnext,
+        mixins,
+        nested
+    ];
+    return gulp.src('./src/*.css')
+        .pipe(postcss(processors))
+        .pipe(gulp.dest('./dest'));
+});
+
+gulp.task('watch', function() {
+    gulp.watch('src/**/*.css', ['css']);
+});
+        </code></pre>
+                </section>
+                <section data-background="assets/demo.jpg" data-background-position: "right top">
+
+                </section>
+            </section>
+
+            <!-- nak -->
+            <section>
+                <section>
+                    <h1>Great <span class="bold color">Plugins</span> for awesome <span class="bold color">features</span></h1>
+                </section>
+                <section>
+                    <h1><span class="text color  bold ">Future </span>CSS ?</h1>
+
+                </section>
+                <section>
+                    <div class=""> <img style="height:100px;" src="https://camo.githubusercontent.com/f265315f74ed08b94e473cd7f6f04c291e59a8e2/687474703a2f2f706f73746373732e6769746875622e696f2f6175746f70726566697865722f6c6f676f2e737667" alt="">
+                        <h3>Autoprefixer</h3>    </div>
+                        <p><span class="bold color">Add vendor prefixes</span> to CSS rules using values from Can I Use.</p>
+<div class="container">
+                        <pre><code class="css">
+<!-- Input -->
+:fullscreen a {
+    display: flex
+}
+</code></pre>
+<pre><code>
+<!-- output -->
+:-webkit-full-screen a {
+    display: -webkit-box;
+    display: flex
+}
+:-moz-full-screen a {
+    display: flex
+}
+:-ms-fullscreen a {
+    display: -ms-flexbox;
+    display: flex
+}
+:fullscreen a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
+}
+</code></pre>
+
+                            </div><a href="https://github.com/postcss/autoprefixer" target="_blank" class="icon-source"></a>
+
+                </section>
+                <section>
+                    <h1><span class=" bold">Custom</span> properties</h1>
+                    <a class="icon-source" href="https://www.w3.org/TR/css-variables/" target="_blank"></a>
+                </section>
+                <section data-background="#222">
+                    <h1>
+                        <span class="pound motion to huge icon-heart"></span>
+                    </h1>
+                </section>
+                <section>
+                    <h1>Syntax</h1>
+                    <pre><code class="css">
+:root{
+    --color:#f2b806;
+}
+
+.foo{
+    color:var(--color);
+}
+                    </code></pre>
+                </section>
+                <section>
+                    <h1>Can I use?</h1>
+                    <iframe width="100%" class="three quarters height" src="http://caniuse.com/#feat=css-variables" frameborder="0"></iframe>
+                </section>
+                <section>
+                    <h1>But we can use the syntax <span class="bold color">today</span></h1>
+                </section>
+                <section>
+                    <h1>postcss-custom-properties</h1>
+                    <div class="container">
+
+
+                        <pre><code>
+/*Using this input.css:*/
+
+:root {
+  --color: pink;
+}
+
+div {
+  color: var(--color);
+}
+                  </code></pre>
+
+                        <pre><code>
+/*you will get:*/
+
+div {
+  color: pink;
+}
+                  </code></pre>
+                    </div>
+                    <a href="https://github.com/postcss/postcss-custom-properties" target="_blank" class="icon-source"></a>
+                </section>
+
+                <section>
+                  <h1 class="color bold">@import</h1>
+                  <a class="icon-source" target="_blank" href="https://www.w3.org/TR/css-cascade-3/#at-import"></a>
+                </section>
+                <section>
+                    <h1>postcss-import</h1>
+                    <p>PostCSS plugin to inline <span class="bold color">@import</span> rules content</p>
+                    <pre><code>
+              @import "helpers/var.css";
+                   </code></pre>
+                    <a href="https://github.com/postcss/postcss-import" target="_blank" class="icon-source"></a>
+                </section>
+                <section>
+                  <h1 class="bold color">Nesting</h1>
+                  <a class="icon-source" target="_blank" href="https://tabatkins.github.io/specs/css-nesting/"></a>
+                </section>
+                <section>
+                    <h1>Nested</h1>
+                    <p>PostCSS plugin to <span class="color bold">unwrap nested rules</span> like how <span class="color bold">Sass</span> does it.</p>
+                    <div class="flex">
+                        <pre><code>
+.phone {
+  &_title {
+    width: 500px;
+    @media (max-width: 500px) {
+      width: auto;
+    }
+    body.is_dark & {
+      color: white;
+    }
+  }
+  img {
+  display: block;
+  }
+}
+              </code></pre>
+                        <pre><code>
+.phone_title {
+  width: 500px;
+}
+@media (max-width: 500px) {
+  .phone_title {
+    width: auto;
+  }
+}
+body.is_dark .phone_title {
+  color: white;
+}
+.phone img {
+  display: block;
+}
+              </code></pre>
+                    </div>
+                    <a href="https://github.com/postcss/postcss-nested" target="_blank" class="icon-source"></a>
+                </section>
+                <section>
+                    <h1>postcss-mixins</h1>
+                    <p>PostCSS plugin for <span class="bold color">mixins</span></p>
+                    <div class="container">
+                        <pre><code>
+@define-mixin icon $network, $color: blue {
+  .icon.is-$(network) {
+    color: $color;
+    @mixin-content;
+  }
+  .icon.is-$(network):hover {
+    color: white;
+    background: $color;
+  }
+}
+
+@mixin icon twitter {
+  background: url(twt.png);
+}
+@mixin icon youtube, red {
+  background: url(youtube.png);
+}
+
+              </code></pre>
+                        <pre><code>
+.icon.is-twitter {
+  color: blue;
+  background: url(twt.png);
+}
+.icon.is-twitter:hover {
+  color: white;
+  background: blue;
+}
+.icon.is-youtube {
+  color: red;
+  background: url(youtube.png);
+}
+.icon.is-youtube:hover {
+  color: white;
+  background: red;
+}
+
+              </code></pre>
+                    </div>
+                    <a href="https://github.com/postcss/postcss-mixins" target="_blank" class="icon-source"></a>
+                </section>
+                <section>
+                    <h1><span class="bold color">@apply</span> rule</h1>
+                    <a href="https://tabatkins.github.io/specs/css-apply-rule/" target="_blank" class="icon-source"></a>
+                </section>
+                <!-- <section>
+                    <pre><code>
+:root {
+  --toolbar-theme: {
+    background-color: hsl(120, 70%, 95%);
+    border-radius: 4px;
+    border: 1px solid var(--theme-color late);
+  };
+  --toolbar-title-theme: {
+    color: green;
+  };
+}
+
+.toolbar {
+  @apply --toolbar-theme;
+}
+.toolbar > .title {
+  @apply --toolbar-title-theme;
+}</code></pre>
+                </section> -->
+                <section>
+                    <a href="https://www.chromestatus.com/feature/5753701012602880" target="_blank">https://www.chromestatus.com/feature/5753701012602880</a>
+                </section>
+                <section>
+                  <h1>postcss-apply</h1>
+                  <div class="container">
+                    <pre><code>
+/* input */
+:root {
+  --toolbar-theme: {
+    background-color: rebeccapurple;
+    color: white;
+    border: 1px solid green;
+  };
+  --toolbar-title-theme: {
+    color: green;
+  };
+}
+
+.toolbar {
+  @apply --toolbar-theme;
+}
+
+.toolbar-title {
+  @apply --toolbar-title-theme;
+}
+                    </code></pre>
+                    <pre><code>
+/* output */
+.toolbar {
+  background-color: rebeccapurple;
+  color: white;
+  border: 1px solid green;
+}
+
+.toolbar-title {
+  color: green;
+}
+                    </code></pre>
+                  </div>
+                  <a href="https://github.com/pascalduez/postcss-apply" target="_blank" class="icon-source"></a>
+                </section>
+                <section>
+                    <h1>CSS <span class="color bold">extensions</span></h1>
+                    <a class="icon-source" href="https://drafts.csswg.org/css-extensions/" target="_blank"></a>
+                    <p class="label">W3C Editor's Draft</p>
+                </section>
+                <section>
+                    <h1> Custom <span class="color bold">selectors</span></h1>
+                    <a href="https://drafts.csswg.org/css-extensions/#custom-selectors" target="_blank" class="icon-source"></a>
+                    <p class="label">W3C Editor's Draft</p>
+                </section>
+                <section>
+                    <h1>Sexy</h1>
+                    <pre><code class="css">
+                @custom-selector :--heading h1, h2, h3, h4, h5, h6;
+
+                :--heading { /* styles for all headings */ }
+                :--heading + p { /* more styles */ }
+                /* etc */
+                                    </code></pre>
+                </section>
+                <section>
+                    <h1>But this is the <span class="color bold">future</span></h1>
+                    <h2>Really?</h2>
+                    <h2><a href="https://github.com/postcss/postcss-custom-selectors" target="_blank" ><span class="icon-github"></span> postcss-custom-selectors</a></h2>
+                </section>
+
+                <section>
+                    <img src="https://camo.githubusercontent.com/d6a7cde211b2bcbfd7099c127eda99b75dd65a3e/68747470733a2f2f7261776769742e636f6d2f62656e2d65622f6373736e616e6f2f6d61737465722f6d656469612f6c6f676f2e737667" width="150" alt="">
+                    <h1>CSS nano</h1>
+                    <p><span class="bold color">Compresses</span> your css</p>
+                    <pre><code>
+@charset "utf-8";h1:before{margin:10px 20px;color:red;border-radius:16px;font-weight:normal;background-position:100% 100%}
+                    </code></pre>
+                    <a href="http://cssnano.co/" target="_blank" class="icon-source"></a>
+                </section>
+                <section>
+                    <div>
+                        <img src="http://postcss.org/_/web_modules/InANutshell/css-modules.svg" width="150" alt="">
+                        <h3>CSS Modules</h3>
+                        <p>Work CSS like <span class="bold color">independent components</span></p>
+                        <a href="https://github.com/css-modules/css-modules" target="_blank" class="icon-source"></a>
+                        <div class="flex">
+                            <pre><code class="css">
+    <!-- input -->
+    .name {
+        color: gray;
+    }
+
+        </code></pre>
+                            <pre><code>
+    <!-- output -->
+    .Logo__name__SVK0g {
+        color: gray;
+    }
+        </code></pre>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h1>postcss-sorting</h1>
+                    <p>PostCSS plugin to <span class="bold color">sort rules</span> content with <span class="bold color">specified order</span>.</p>
+                    <p><span class="color bold">Declarations</span>. Example: { "sort-order": [ "margin", "padding" ] }</p>
+                    <div class="flex">
+                        <pre><code>
+/* before */
+p {
+    padding: 0;
+    margin: 0;
+}
+                      </code></pre><pre><code>
+/* after */
+p {
+    margin: 0;
+    padding: 0;
+}
+                      </code></pre>
+                    </div>
+                    <p><span class="color bold">Grouping</span>. Example: { "sort-order": [ [ "margin", "padding" ], [ "border", "background" ] ] }</p>
+                    <div class="flex">
+                        <pre><code>
+/* before */
+p {
+    background: none;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+                      </code></pre><pre><code>
+/* after */
+p {
+    margin: 0;
+    padding: 0;
+
+    border: 0;
+    background: none;
+}
+                      </code></pre>
+                    </div>
+                    <a href="https://github.com/hudochenkov/postcss-sorting" target="_blank" class="icon-source"></a>
+                </section>
+                <section>
+                    <h1>stylelint</h1>
+                    <p>A mighty, modern CSS linter that helps you enforce consistent conventions and avoid errors in your stylesheets.</p>
+                    <img src="https://github.com/stylelint/stylelint/raw/master/example.png?raw=true" alt="">
+                    <a href="http://stylelint.io/" target="_blank" class="icon-source"></a>
+                </section>
+                <section>
+                    <h1>> 200</h1>
+                    <ul>
+                        <li><span class="color bold">postcss-focus</span>: add :focus selector to every :hover for keyboard accessibility
+                            <a href="https://github.com/postcss/postcss-focus" target="_blank" class="icon-source"></a>
+                        </li>
+                        <li><span class="color bold">postcss-extract-value</span>: extract values from css properties and put them into variables.
+                            <a href="https://github.com/lutien/postcss-extract-value" target="_blank" class="icon-source"></a>
+                        </li>
+                        <li><span class="color bold">postcss-devtools</span>: Log execution time for each plugin in a PostCSS instance.
+                            <a href="https://github.com/postcss/postcss-devtools" target="_blank" class="icon-source"></a>
+                        </li>
+                        <li><span class="color bold">postcss-critical-split</span>: takes existing CSS files and splits out the annotated critical styles into a seperate file.
+                            <a href="https://www.npmjs.com/package/postcss-critical-split" target="_blank" class="icon-source"></a>
+                        </li>
+                        <li>...</li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>Plugin <span class="color bold">packages</span></h1>
+                </section>
+                <section>
+                    <div>
+                        <img src="http://postcss.org/_/web_modules/InANutshell/cssnext.svg" alt="">
+                        <h3>cssnext</h3>
+                        <p>Use the latest CSS syntax today with cssnext</p>
+                        <pre><code class="css">
+<!-- Input -->
+:root {
+    --red: #d33;
+}
+a {
+    &:hover {
+        color: color(var(--red) a(54%));
+    }
+}
+<!-- Output -->
+a:hover {
+    color: #dd3333;
+    color: rgba(221, 51, 51, 0.54);
+}
+                            </code></pre>
+                        <a href="http://cssnext.io/" target="_blank" class="icon-source"></a>
+                    </div>
+                </section>
+                <section>
+                    <h1>Features</h1>
+                    <div class="flex">
+                        <ul>
+                            <li>
+                                <a target="_blank" href="http://cssnext.io/features/#automatic-vendor-prefixes">automatic vendor prefixes</a> </li>
+                            <li>
+                                <a target="_blank" href="http://cssnext.io/features/#custom-properties-var">custom properties &amp; <code>var()</code></a> </li>
+                            <li>
+                                <a target="_blank" href="http://cssnext.io/features/#reduced-calc">reduced <code>calc()</code></a> </li>
+                            <li>
+                                <a target="_blank" href="http://cssnext.io/features/#custom-media-queries">custom media queries</a> </li>
+                            <li>
+                                <a target="_blank" href="http://cssnext.io/features/#media-queries-ranges">media queries ranges</a> </li>
+                            <li>
+                                <a target="_blank" href="http://cssnext.io/features/#custom-selectors">custom selectors</a> </li>
+                            <li>
+                                <a target="_blank" href="http://cssnext.io/features/#nesting">nesting</a> </li>
+                            <li>
+                                <a target="_blank" href="http://cssnext.io/features/#color-function"><code>color()</code> function</a> </li>
+                            <li>
+                                <a target="_blank" href="http://cssnext.io/features/#hwb-function"><code>hwb()</code> function</a> </li>
+                            <li>
+                                <a target="_blank" href="http://cssnext.io/features/#gray-function"><code>gray()</code> function</a> </li>
+                            <li>
+                                <a target="_blank" href="http://cssnext.io/features/#rrggbbaa-colors"><code>#rrggbbaa</code> colors</a> </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <a target="_blank" href="http://cssnext.io/features/#rgba-function-rgb-fallback"><code>rgba</code> function <small class="cssnext-FeaturesList-small">
+                                 (<code>rgb</code> fallback)
+                               </small>
+                             </a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="http://cssnext.io/features/#rebeccapurple-color"><code>rebeccapurple</code> color</a> </li>
+                            <li>
+                                <a target="_blank" href="http://cssnext.io/features/#font-variant-property"><code>font-variant</code> property</a> </li>
+                            <li>
+                                <a target="_blank" href="http://cssnext.io/features/#filter-property"><code>filter</code> property</a> <small class="cssnext-FeaturesList-small">
+                               (svg fallback)
+                             </small>
+                            </li>
+                            <li>
+                                <a target="_blank" href="http://cssnext.io/features/#initial-value"><code>initial</code> value</a> </li>
+                            <li>
+                                <a target="_blank" href="http://cssnext.io/features/#rem-unit-px-fallback"><code>rem</code> unit</a> <small class="cssnext-FeaturesList-small">
+                               (<code>px</code> fallback)
+                             </small>
+                            </li>
+                            <li>
+                                <a target="_blank" href="http://cssnext.io/features/#any-link-pseudo-class"><code>:any-link</code> pseudo-class</a> </li>
+                            <li>
+                                <a target="_blank" href="http://cssnext.io/features/#matches-pseudo-class"><code>:matches</code> pseudo-class</a> </li>
+                            <li>
+                                <a target="_blank" href="http://cssnext.io/features/#not-pseudo-class"><code>:not</code> pseudo-class</a> <small class="cssnext-FeaturesList-small">
+                               (to l.3)
+                             </small>
+                            </li>
+
+                            <li>
+                                <a target="_blank" href="http://cssnext.io/features/#pseudo-syntax-fallback"><code>::</code>pseudo syntax</a> <small class="cssnext-FeaturesList-small">
+                               (<code>:</code> fallback)
+                             </small>
+                            </li>
+                            <li>
+                                <a target="_blank" href="http://cssnext.io/features/#replace-overflow-wrap"><code>overflow-wrap</code> property</a> <small class="cssnext-FeaturesList-small">
+                               (<code>word-wrap</code> fallback)
+                             </small>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section>
+                    <h1>preCSS</h1>
+                    <p>Use <span class="bold color">Sass-like markup</span> in your CSS</p>
+                    <ul>
+                        <li>Variables</li>
+                        <li>Conditionals</li>
+                        <li>Loops</li>
+                        <li>Mixins</li>
+                        <li>Extends</li>
+                        <li>Imports</li>
+                        <li>...</li>
+                    </ul><br>
+                    <a class="icon-source" href="https://github.com/jonathantneal/precss" target="_blank"></a>
+
+                </section>
+            </section>
+            <!-- nak -->
+
+            <!-- nak -->
+            <section>
+                <section>
+                    <h1>From <span class="text color  bold ">Sass</span> to PostCSS</h1>
+
+                </section>
+                <section>
+                    <h1>Is Sass dead?</h1>
+                </section>
+                <section>
+                    <h1>From <span class="bold color">Sass</span> to <span class="bold color">PostCSS</span></h1>
+                    <h2>Try it</h2>
+                    <a class="icon-github block huge" href="https://github.com/nabaroa/fromSassToPostCSS" target="_blank"></a>
+                    <p>It's possible</p>
+                </section>
+                <section>
+                    <h1 class="bold">Sass <span class="pound motion icon-heart"></span> postCSS</h1>
+                    <h2>They can live <span class="bold color block">together</span></h2>
+                </section>
+                <section>
+                    <h1>But the truth is that <span class="color bold">we don´t need</span><br> Sass anymore</h1>
+                </section>
+            </section>
+
+            <!-- nak -->
+            <section>
+                <section>
+                    <h1>Best <span class="bold color">practices</span></h1>
+                </section>
+                <section>
+                    <h1>Keep it <span class="bold color">simple</span></h1>
+                </section>
+
+
+            </section>
+
+            <!-- nak -->
+            <section>
+                <section>
+                    <h1>Just for <span class="bold color">fun</span></h1>
+                </section>
+                <section>
+                  <h2>PostCSS Spanish Stylesheets <a class="icon-source" target=_blank href="https://github.com/ismamz/postcss-spanish-stylesheets"></a></h2>
+                  <h2>PostCSS Andalusian Stylesheets  <a class="icon-source" target=_blank href="https://github.com/bameda/postcss-andalusian-stylesheets"></a></h2>
+                  <h2>PostCSS trolling  <a class="icon-source" target=_blank href="https://github.com/juanfran/postcss-trolling"></a></h2>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h1>Need <span class="bold color">more</span> arguments?</h1>
+                </section>
+                <section>
+                    <h1>Lea is thinking of <span class="color bold">switching</span></h1>
+                    <img src="assets/lea.jpg" class="circle vam" alt="">
+                    <img src="assets/lea.png" class="vam" alt="">
+                    <br>
+                    <a class="icon-source " href="https://twitter.com/LeaVerou/status/739594371314683905" target="_blank"></a>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h1>What did I <span class="bold color">use</span>?</h1>
+                </section>
+                <section>
+                    <a href="https://github.com/nabaroa/postcss-treasure-map" class="huge icon-github  no-text-decoration" target="_blank"></a>
+                    <div>
+                        <div><a target="_blank" href="http://lab.hakim.se/reveal-js/#/">reveal.js</a></div>
+                        <div><a target="_blank" href="http://postcss.org/">postCSS</a></div>
+                        <div><a target="_blank" href="http://gulpjs.com/">gulp</a></div>
+                    </div>
+                    <div class="container">
+                    </div>
+                </section>
+                <section>
+                    <h1 class="bold color"> #thks</h1>
+                    <h2>;)</h2>
+                </section>
+                <section data-background="assets/interrogation.jpg" data-background-position="top left">
+                    <!-- <h1>Eskerrik asko!</h1> -->
+                    <h2> <span class="bold white">&nbsp;questions?&nbsp;</h1>  <!-- <h2><a class="color bold white " href="https://twitter.com/nabaroa"> &nbsp;@nabaroa &nbsp;</a></h2> -->
+                </section>
+            </section>
+        </div>
+    </div>
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+    <script>
+        // Full list of configuration options available at:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
+
+            transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+            // Optional reveal.js plugins
+            dependencies: [{
+                src: 'lib/js/classList.js',
+                condition: function() {
+                    return !document.body.classList;
+                }
+            }, {
+                src: 'plugin/markdown/marked.js',
+                condition: function() {
+                    return !!document.querySelector('[data-markdown]');
+                }
+            }, {
+                src: 'plugin/markdown/markdown.js',
+                condition: function() {
+                    return !!document.querySelector('[data-markdown]');
+                }
+            }, {
+                src: 'plugin/highlight/highlight.js',
+                async: true,
+                callback: function() {
+                    hljs.initHighlightingOnLoad();
+                }
+            }, {
+                src: 'plugin/zoom-js/zoom.js',
+                async: true
+            }, {
+                src: 'plugin/notes/notes.js',
+                async: true
+            }]
+        });
+    </script>
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-32740256-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,147 @@
+<svg version="1.1" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica, sans-serif;font-size:12px;" xmlns="http://www.w3.org/2000/svg" width="980" height="400">
+    <desc>Created with Highcharts 3.0.10</desc>
+    <defs>
+        <clipPath id="highcharts-5">
+            <rect x="0" y="0" width="889" height="282"></rect>
+        </clipPath>
+    </defs>
+    <rect x="0" y="0" width="980" height="400" rx="5" ry="5" fill="none" class=" highcharts-background"></rect>
+    <g class="highcharts-grid" zIndex="1"></g>
+    <g class="highcharts-grid" zIndex="1">
+        <path fill="none" d="M 81 54.5 L 970 54.5" stroke="#C0C0C0" stroke-width="1" zIndex="1" opacity="1"></path>
+        <path fill="none" d="M 81 111.5 L 970 111.5" stroke="#C0C0C0" stroke-width="1" zIndex="1" opacity="1"></path>
+        <path fill="none" d="M 81 168.5 L 970 168.5" stroke="#C0C0C0" stroke-width="1" zIndex="1" opacity="1"></path>
+        <path fill="none" d="M 81 224.5 L 970 224.5" stroke="#C0C0C0" stroke-width="1" zIndex="1" opacity="1"></path>
+        <path fill="none" d="M 81 281.5 L 970 281.5" stroke="#C0C0C0" stroke-width="1" zIndex="1" opacity="1"></path>
+        <path fill="none" d="M 81 337.5 L 970 337.5" stroke="#C0C0C0" stroke-width="1" zIndex="1" opacity="1"></path>
+    </g>
+    <g class="highcharts-axis" zIndex="2">
+        <path fill="none" d="M 217.5 337 L 217.5 342" stroke="#C0D0E0" stroke-width="1" opacity="1"></path>
+        <path fill="none" d="M 285.5 337 L 285.5 342" stroke="#C0D0E0" stroke-width="1" opacity="1"></path>
+        <path fill="none" d="M 354.5 337 L 354.5 342" stroke="#C0D0E0" stroke-width="1" opacity="1"></path>
+        <path fill="none" d="M 422.5 337 L 422.5 342" stroke="#C0D0E0" stroke-width="1" opacity="1"></path>
+        <path fill="none" d="M 490.5 337 L 490.5 342" stroke="#C0D0E0" stroke-width="1" opacity="1"></path>
+        <path fill="none" d="M 559.5 337 L 559.5 342" stroke="#C0D0E0" stroke-width="1" opacity="1"></path>
+        <path fill="none" d="M 627.5 337 L 627.5 342" stroke="#C0D0E0" stroke-width="1" opacity="1"></path>
+        <path fill="none" d="M 695.5 337 L 695.5 342" stroke="#C0D0E0" stroke-width="1" opacity="1"></path>
+        <path fill="none" d="M 764.5 337 L 764.5 342" stroke="#C0D0E0" stroke-width="1" opacity="1"></path>
+        <path fill="none" d="M 832.5 337 L 832.5 342" stroke="#C0D0E0" stroke-width="1" opacity="1"></path>
+        <path fill="none" d="M 901.5 337 L 901.5 342" stroke="#C0D0E0" stroke-width="1" opacity="1"></path>
+        <path fill="none" d="M 969.5 337 L 969.5 342" stroke="#C0D0E0" stroke-width="1" opacity="1"></path>
+        <path fill="none" d="M 148.5 337 L 148.5 342" stroke="#C0D0E0" stroke-width="1" opacity="1"></path>
+        <path fill="none" d="M 80.5 337 L 80.5 342" stroke="#C0D0E0" stroke-width="1"></path>
+        <text x="525.5" y="382" zIndex="7" text-anchor="middle" transform="translate(0,0)" class=" highcharts-xaxis-title" style="color:#000000;font-weight:bold;fill:#000000;" visibility="visible">
+            <tspan x="525.5">Month</tspan>
+        </text>
+        <path fill="none" d="M 81 337.5 L 970 337.5" stroke="#000000" stroke-width="1" zIndex="7" visibility="visible"></path>
+    </g>
+    <g class="highcharts-axis" zIndex="2">
+        <text x="25.28125" y="196" zIndex="7" text-anchor="middle" transform="translate(0,0) rotate(270 25.28125 196)" class=" highcharts-yaxis-title" style="color:#000000;font-weight:bold;fill:#000000;" visibility="visible">
+            <tspan x="25.28125">Downloads</tspan>
+        </text>
+    </g>
+    <g class="highcharts-series-group" zIndex="3">
+        <g class="highcharts-series highcharts-tracker" visibility="visible" zIndex="0.1" transform="translate(81,55) scale(1 1)" style="" clip-path="url(#highcharts-5)">
+            <rect x="14" y="220" width="42" height="63" fill="#AA0000" rx="0" ry="0"></rect>
+            <rect x="82" y="191" width="42" height="92" fill="#AA0000" rx="0" ry="0"></rect>
+            <rect x="150" y="179" width="42" height="104" fill="#AA0000" rx="0" ry="0"></rect>
+            <rect x="219" y="158" width="42" height="125" fill="#AA0000" rx="0" ry="0"></rect>
+            <rect x="287" y="163" width="42" height="120" fill="#AA0000" rx="0" ry="0"></rect>
+            <rect x="356" y="137" width="42" height="146" fill="#AA0000" rx="0" ry="0"></rect>
+            <rect x="424" y="138" width="42" height="145" fill="#AA0000" rx="0" ry="0"></rect>
+            <rect x="492" y="114" width="42" height="169" fill="#AA0000" rx="0" ry="0"></rect>
+            <rect x="561" y="78" width="42" height="205" fill="#AA0000" rx="0" ry="0"></rect>
+            <rect x="629" y="36" width="42" height="247" fill="#AA0000" rx="0" ry="0"></rect>
+            <rect x="698" y="35" width="42" height="248" fill="#AA0000" rx="0" ry="0"></rect>
+            <rect x="766" y="18" width="42" height="265" fill="#AA0000" rx="0" ry="0"></rect>
+            <!-- <rect x="834" y="247" width="42" height="36" fill="#AA0000" rx="0" ry="0"></rect> -->
+        </g>
+        <g class="highcharts-markers" visibility="visible" zIndex="0.1" transform="translate(81,55) scale(1 1)"></g>
+    </g>
+    <text x="490" y="25" text-anchor="middle" class="highcharts-title" zIndex="4" style="color:#000000;font-size:16px;fill:#000000;width:916px;">
+        <tspan x="490">Downloads per month</tspan>
+    </text>
+ 
+    <g class="highcharts-axis-labels highcharts-xaxis-labels" zIndex="7">
+        <text x="115.1923076923077" y="351" text-anchor="middle" style="width:48px;color:#666;cursor:default;font-size:11px;fill:#666;" opacity="1">
+            <tspan x="115.1923076923077">Jun</tspan>
+            <tspan dy="15" x="115.1923076923077">2015</tspan>
+        </text>
+        <text x="183.5769230769231" y="351" text-anchor="middle" style="width:48px;color:#666;cursor:default;font-size:11px;fill:#666;" opacity="1">
+            <tspan x="183.5769230769231">Jul 2015</tspan>
+        </text>
+        <text x="251.96153846153845" y="351" text-anchor="middle" style="width:48px;color:#666;cursor:default;font-size:11px;fill:#666;" opacity="1">
+            <tspan x="251.96153846153845">Aug</tspan>
+            <tspan dy="15" x="251.96153846153845">2015</tspan>
+        </text>
+        <text x="320.34615384615387" y="351" text-anchor="middle" style="width:48px;color:#666;cursor:default;font-size:11px;fill:#666;" opacity="1">
+            <tspan x="320.34615384615387">Sep</tspan>
+            <tspan dy="15" x="320.34615384615387">2015</tspan>
+        </text>
+        <text x="388.7307692307692" y="351" text-anchor="middle" style="width:48px;color:#666;cursor:default;font-size:11px;fill:#666;" opacity="1">
+            <tspan x="388.7307692307692">Oct</tspan>
+            <tspan dy="15" x="388.7307692307692">2015</tspan>
+        </text>
+        <text x="457.11538461538464" y="351" text-anchor="middle" style="width:48px;color:#666;cursor:default;font-size:11px;fill:#666;" opacity="1">
+            <tspan x="457.11538461538464">Nov</tspan>
+            <tspan dy="15" x="457.11538461538464">2015</tspan>
+        </text>
+        <text x="525.4999999999999" y="351" text-anchor="middle" style="width:48px;color:#666;cursor:default;font-size:11px;fill:#666;" opacity="1">
+            <tspan x="525.4999999999999">Dec</tspan>
+            <tspan dy="15" x="525.4999999999999">2015</tspan>
+        </text>
+        <text x="593.8846153846154" y="351" text-anchor="middle" style="width:48px;color:#666;cursor:default;font-size:11px;fill:#666;" opacity="1">
+            <tspan x="593.8846153846154">Jan</tspan>
+            <tspan dy="15" x="593.8846153846154">2016</tspan>
+        </text>
+        <text x="662.2692307692308" y="351" text-anchor="middle" style="width:48px;color:#666;cursor:default;font-size:11px;fill:#666;" opacity="1">
+            <tspan x="662.2692307692308">Feb</tspan>
+            <tspan dy="15" x="662.2692307692308">2016</tspan>
+        </text>
+        <text x="730.6538461538462" y="351" text-anchor="middle" style="width:48px;color:#666;cursor:default;font-size:11px;fill:#666;" opacity="1">
+            <tspan x="730.6538461538462">Mar</tspan>
+            <tspan dy="15" x="730.6538461538462">2016</tspan>
+        </text>
+        <text x="799.0384615384615" y="351" text-anchor="middle" style="width:48px;color:#666;cursor:default;font-size:11px;fill:#666;" opacity="1">
+            <tspan x="799.0384615384615">Apr</tspan>
+            <tspan dy="15" x="799.0384615384615">2016</tspan>
+        </text>
+        <text x="867.4230769230769" y="351" text-anchor="middle" style="width:48px;color:#666;cursor:default;font-size:11px;fill:#666;" opacity="1">
+            <tspan x="867.4230769230769">May</tspan>
+            <tspan dy="15" x="867.4230769230769">2016</tspan>
+        </text>
+      
+    </g>
+    <g class="highcharts-axis-labels highcharts-yaxis-labels" zIndex="7">
+        <text x="0" y="-9999" text-anchor="end" style="width:303px;color:#666;cursor:default;font-size:11px;fill:#666;">
+            <tspan x="0">0k</tspan>
+        </text>
+        <text x="73" y="286.1" text-anchor="end" style="width:303px;color:#666;cursor:default;font-size:11px;fill:#666;" opacity="1">
+            <tspan x="73">500k</tspan>
+        </text>
+        <text x="73" y="229.7" text-anchor="end" style="width:303px;color:#666;cursor:default;font-size:11px;fill:#666;" opacity="1">
+            <tspan x="73">1,000k</tspan>
+        </text>
+        <text x="73" y="173.29999999999998" text-anchor="end" style="width:303px;color:#666;cursor:default;font-size:11px;fill:#666;" opacity="1">
+            <tspan x="73">1,500k</tspan>
+        </text>
+        <text x="73" y="116.9" text-anchor="end" style="width:303px;color:#666;cursor:default;font-size:11px;fill:#666;" opacity="1">
+            <tspan x="73">2,000k</tspan>
+        </text>
+        <text x="73" y="60.5" text-anchor="end" style="width:303px;color:#666;cursor:default;font-size:11px;fill:#666;" opacity="1">
+            <tspan x="73">2,500k</tspan>
+        </text>
+    </g>
+    <g class="highcharts-tooltip" zIndex="8" style="cursor:default;padding:0;white-space:nowrap;" transform="translate(501,102)" opacity="0" visibility="hidden">
+        <rect x="0.5" y="0.5" width="149" height="45" fill="none" fill-opacity="0.85" rx="3" ry="3" isShadow="true" stroke="black" stroke-opacity="0.049999999999999996" stroke-width="5" transform="translate(1, 1)"></rect>
+        <rect x="0.5" y="0.5" width="149" height="45" fill="none" fill-opacity="0.85" rx="3" ry="3" isShadow="true" stroke="black" stroke-opacity="0.09999999999999999" stroke-width="3" transform="translate(1, 1)"></rect>
+        <rect x="0.5" y="0.5" width="149" height="45" fill="none" fill-opacity="0.85" rx="3" ry="3" isShadow="true" stroke="black" stroke-opacity="0.15" stroke-width="1" transform="translate(1, 1)"></rect>
+        <rect x="0.5" y="0.5" width="149" height="45" fill="rgb(255,255,255)" fill-opacity="0.85" rx="3" ry="3" stroke="#AA0000" stroke-width="1" anchorX="161.5" anchorY="30"></rect>
+        <text x="8" y="21" zIndex="1" style="font-size:12px;color:#333333;fill:#333333;">
+            <tspan style="font-size: 10px" x="8">Feb 2016</tspan>
+            <tspan style="fill:#AA0000" x="8" dy="16">Downloads</tspan>
+            <tspan dx="0">: </tspan>
+            <tspan style="font-weight:bold" dx="0">1,821,077</tspan>
+        </text>
+    </g>
+</svg>
