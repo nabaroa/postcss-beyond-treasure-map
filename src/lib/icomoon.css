@@ -1,0 +1,75 @@
+@font-face {
+  font-family: 'icon-slides';
+  src: url("../fonts/icon-slides.eot?21hpki");
+  src: url("../fonts/icon-slides.eot?21hpki#iefix") format("embedded-opentype"), url("../fonts/icon-slides.ttf?21hpki") format("truetype"), url("../fonts/icon-slides.woff?21hpki") format("woff"), url("../fonts/icon-slides.svg?21hpki#icon-slides") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icon-slides' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-ok:before {
+  content: "\e901";
+}
+
+.icon-source:before {
+  content: "\e800";
+}
+
+.icon-heart:before {
+  content: "\e900";
+}
+
+.icon-github:before {
+  content: "\e600";
+}
+
+.icon-twitter:before {
+  content: "\f099";
+}
+
+.icon-angle-left:before {
+  content: "\f104";
+}
+
+.icon-angle-right:before {
+  content: "\f105";
+}
+
+.icon-angle-up:before {
+  content: "\f106";
+}
+
+.icon-angle-down:before {
+  content: "\f107";
+}
+
+.icon-codepen:before {
+  content: "\f1cb";
+}
+
+.icon-arrow-up:before {
+  content: "\e096";
+}
+
+.icon-cross:before {
+  content: "\e117";
+  font-family: 'icon-slides' !important;
+}
+
+.icon-menu:before {
+  content: "\e120";
+}

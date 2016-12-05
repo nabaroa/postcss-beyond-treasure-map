@@ -1,0 +1,39 @@
+/*!
+ * Slides: The Gold Rush. by Naiara Abaroa @nabaroa
+ * version: 1.0.0;
+ * http://naknak.me/thegoldrush
+ * MIT licensed
+ *
+ */
+
+/*---------------------------------------------
+ * Helpers
+ *---------------------------------------------- */
+@import "helpers/var.css";
+/*---------------------------------------------
+ * Base
+ *---------------------------------------------- */
+@import "base/typography.css";
+/*---------------------------------------------
+ * Components
+ *---------------------------------------------- */
+@import "components/grid-debug.css"; 
+
+/*---------------------------------------------
+ * Vendor Lib 
+ *---------------------------------------------- */
+@import "lib/reveal.css";
+@import "lib/icomoon.css";
+@import "lib/prism.css";
+@import "lib/zenburn.css";
+
+/*---------------------------------------------
+ * Pages
+ *---------------------------------------------- */
+@import "pages/home.css";
+
+/*---------------------------------------------
+ * Theme
+ *---------------------------------------------- */
+@import "theme/night.css";
+@import "theme/slides_nak_4.0.css";

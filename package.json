@@ -1,0 +1,25 @@
+{
+  "name": "postcss-beyond-treasure-map",
+  "version": "1.0.0",
+  "description": "Slides on postCSS",
+  "homepage": "http://naknakme/postCSS",
+  "author": {
+    "name": "Naiara Abaroa",
+    "email": "naiaraabaroa@gmail.com",
+    "web": "http://naknak.me"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/nabaroa/postcss-beyond-treasure-map"
+  },
+  "devDependencies": {
+    "cssnano": "^3.5.2",
+    "gulp": "^3.9.0",
+    "gulp-cssnano": "^2.1.1",
+    "gulp-notify": "^2.2.0",
+    "gulp-postcss": "6.1.0",
+    "postcss-cssnext": "^2.4.0",
+    "precss": "^1.4.0"
+  },
+  "license": "MIT"
+}
